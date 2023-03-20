@@ -7,10 +7,16 @@ public class DeleteFile {
 	void delete() {
 		try  
 		{  
-		File file = new File("C:\\Users\\HP\\eclipse-workspace\\com.simplilearn.assessment1\\TextFolder\\stack.txt");  
-		file.deleteOnExit();  
-		System.out.println("File deleted successfully!!!");  
-		Thread.sleep(1000);    
+		String filePath =  "C:\\Users\\HP\\eclipse-workspace\\com.simplilearn.assessment1\\TextFolder\\";
+			System.out.println("Enter your file name to delete: ");
+			Scanner sc = new Scanner(System.in);
+			String fname= sc.next();
+			filePath = filePath+fname;	
+			
+			File file = new File(filePath);  
+			file.deleteOnExit();  
+			System.out.println("File deleted successfully!!!");  
+			Thread.sleep(1000);    
 		}  
 		catch(Exception e)  
 		{  
