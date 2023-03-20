@@ -8,7 +8,13 @@ import java.nio.file.Paths;
 
 public class CreateFile {
 	void create() {
-		Path path = Paths.get("C:\\Users\\HP\\eclipse-workspace\\com.simplilearn.assessment1\\TextFolder\\Path.txt"); //creates Path instance
+		String filePath =  "C:\\Users\\HP\\eclipse-workspace\\com.simplilearn.assessment1\\TextFolder\\";
+		System.out.println("Enter your file name: ");
+		Scanner sc = new Scanner(System.in);
+		String fname= sc.next();
+		filePath = filePath+fname;
+		
+		Path path = Paths.get(filePath);
 		{
 		try   
 		{  
